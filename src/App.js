@@ -11,6 +11,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<allExport.FirstPage />} />
         <Route path='/inputForm' element={<allExport.InputFormPage />} />
+        <Route path='/quizPage' element={<allExport.QuizPage />} />
+        <Route path='*' element={<allExport.ErrorPage />} />
       </Routes>
     </BrowserRouter>
 

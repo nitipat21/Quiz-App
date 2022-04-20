@@ -8,8 +8,8 @@ export default function InputSelectType(props) {
             <label>Select Type:</label>
             <select value={props.value} onChange={props.handleChange}>
                 <option value="">Any Type</option>
-                <option value="Multiple Choice">Multiple Choice</option>
-                <option value="True / False">True / False</option>
+                <option value="multiple">Multiple Choice</option>
+                <option value="boolean">True / False</option>
             </select>
         </div>
 
