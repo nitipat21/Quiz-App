@@ -1,0 +1,39 @@
+.firstPage-main{
+    background-color: #ffffffde;
+}
+
+.firstPage-main > *{
+    font-size: 2.5vw;
+}
+
+.firstPage-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 3.5vw;
+    gap: 3.5vw;
+}
+
+.firstPage-header{
+    text-align: center;
+    color: #fc7d6c;
+}
+
+.firstPage-btn button{
+    padding: 1.75vw 3.5vw;
+    border-radius: 1.75vw;
+    border-style: none;
+    font-size: 2.5vw;
+    background-color: #fc7d6c;
+    color: #ffffffde;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+.firstPage-btn button:hover{
+    background-color: #53767c;
+    color: #ffffffde;
+}

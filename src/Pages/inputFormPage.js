@@ -4,7 +4,8 @@ import InputSelectCategory from '../Components/inputSelectCategory';
 import InputSelectDifficulty from '../Components/inputSelectDifficulty';
 import InputSelectType from '../Components/inputSelectType';
 import SubmitBtn from '../Components/submitBtn';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import '../CSS/inputFormPage.css';
 
 export default function InputFormPage() {
 
@@ -14,12 +15,6 @@ export default function InputFormPage() {
     const [selectDifficulty, setSelectDifficulty] = useState("");
     const [selectType, setSelectType] = useState("");
     const [isSubmit,setIsSubmit] = useState(false);
-
-    function linkToQuizPage(event) {
-        event.preventDefault();
-        
-        return navigate('/quizPage');
-    } 
 
     function updateNumberOfQuiz(event) {
         setNumberOfQuiz(event.target.value);
@@ -58,8 +53,10 @@ export default function InputFormPage() {
                         
                        if (data.response_code === 0) {
                             localStorage.setItem("quiz",JSON.stringify(data.results));
+                            navigate('/quizPage');
+
                        } else {
-                           navigate("/API Error");
+                            navigate("/API Error");
                        }     
 
                     } catch(error) {
@@ -76,7 +73,7 @@ export default function InputFormPage() {
 
         <main className='inputFromPage-main'>
             <div className="inputFormPage-content-container">
-                <form onSubmit={linkToQuizPage}>
+                <form onSubmit={ (event)=> event.preventDefault() }>
                     <InputNumberOfQuiz 
                         value={numberOfQuiz}
                         handleChange={updateNumberOfQuiz}

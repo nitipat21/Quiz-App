@@ -1,5 +1,7 @@
 import React from 'react';
 import QuizCard from '../Components/quizCard';
+import SubmitBtn from '../Components/submitBtn';
+import '../CSS/quizPage.css'
 
 export default function QuizPage() {
     
@@ -11,7 +13,8 @@ export default function QuizPage() {
                                 id={index}
                                 question={props.question} 
                                 correctAnswer={props.correct_answer}
-                                incorrectAnswer={props.incorrect_answer}
+                                incorrectAnswers={props.incorrect_answers}
+                                type={props.type}
                             />
     
     )
@@ -20,8 +23,8 @@ export default function QuizPage() {
 
         <main>
             <div className="quiz-containter">
-                <h1>Hello</h1>
                 {quizElement}
+                <SubmitBtn />
             </div>
         </main>
 

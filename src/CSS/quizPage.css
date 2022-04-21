@@ -1,0 +1,37 @@
+.quiz-containter > *{
+    font-size: 1vw;
+}
+
+.quiz-containter{
+    display: flex;
+    flex-direction: column;
+}
+
+.quizCard-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.75vw;
+    padding: 2vw;
+}
+
+.quizCard-answer-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 1.75vw;
+}
+
+.answer{
+    color: #53767c;
+    padding: 0.5rem;
+}
+
+.answer:hover{
+    background-color: #000000de;
+    color: #ffffffde;
+}
+
+.sumbitBtn-container{
+    align-self: center;
+    padding: 3.5vw;
+}
