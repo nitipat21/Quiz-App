@@ -1,3 +1,5 @@
+
+
 .quiz-containter > *{
     font-size: 1vw;
 }
@@ -26,12 +28,21 @@
     padding: 0.5rem;
 }
 
-.answer:hover{
+.selected{
     background-color: #000000de;
     color: #ffffffde;
 }
 
 .sumbitBtn-container{
-    align-self: center;
+    display: grid;
+    place-content: center;
     padding: 3.5vw;
+}
+
+.result-container{
+    display: flex;
+    padding: 3.5vw;
+    color: #506f08;
+    border-top: solid #000000de;
+    border-bottom: solid #000000de;;
 }
