@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
+import '../CSS/errorPage.css'
 
 export default function ErrorPage() {
+
+    const navigate = useNavigate();
 
     return (
 
@@ -11,6 +15,9 @@ export default function ErrorPage() {
                 </div>
                 <div className="error-info">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                </div>
+                <div className="error-btn-container">
+                    <button className='homeBtn' onClick={() => navigate('/')}>Return Home</button>
                 </div>
             </div>
         </main>

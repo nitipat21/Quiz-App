@@ -36,11 +36,18 @@ export default function QuizCard(props) {
 
     }
 
+    function decodeHtml(text) {
+        const decodeText = document.createElement("textarea");
+        decodeText.innerHTML = text;
+        
+        return decodeText.value;
+    }
+
     return (
 
         <div className="quizCard-container" id={props.id}>
             <div className="quizCard-question-container">
-                <h1>{props.id+1}. {props.question}</h1>
+                <h1>{props.id+1}. {decodeHtml(props.question)}</h1>
             </div>
             <div className="quizCard-answer-container" onClick={selectAnswer}> 
                 {answerElement}
