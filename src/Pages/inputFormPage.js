@@ -17,7 +17,11 @@ export default function InputFormPage() {
     const [isSubmit,setIsSubmit] = useState(false);
 
     function updateNumberOfQuiz(event) {
-        setNumberOfQuiz(event.target.value);
+        if (event.target.value>50) {
+            setNumberOfQuiz(50);
+        } else {
+            setNumberOfQuiz(event.target.value);
+        }
     }
 
     function updateSelectedCategory(event) {

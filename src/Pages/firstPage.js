@@ -18,7 +18,10 @@ export default function FirstPage() {
                     <h1>Quiz App</h1>
                 </div>
                 <div className="firstPage-description">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, maxime.</p>
+                    <p> Welcome to Quiz-App 
+                        <br></br> 
+                        Enter to the next page to select questions you want.
+                    </p>
                 </div>
                 <div className="firstPage-btn">
                     <button onClick={linkToInputFormPage}>Enter</button>

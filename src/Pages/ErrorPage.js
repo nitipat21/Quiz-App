@@ -14,7 +14,7 @@ export default function ErrorPage() {
                     <h1>Error 404 Not Found</h1>
                 </div>
                 <div className="error-info">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <p>We can not provide all questions you need or URL direction is wrong. <br></br>Please come back to home page again.</p>
                 </div>
                 <div className="error-btn-container">
                     <button className='homeBtn' onClick={() => navigate('/')}>Return Home</button>
