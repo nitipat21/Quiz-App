@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function QuizCard(props) {
 
-    const mixAnswerArray = [...props.incorrectAnswers, props.correctAnswer].sort();
+    const [answerElement , setAnswerElement] = useState([])
 
-    const AnswerElement = mixAnswerArray.map(
+    useEffect(()=> {
+        const mixAnswerArray = [...props.incorrectAnswers, props.correctAnswer].sort();
+
+        const answer = mixAnswerArray.map(
         (answer,index) =>   <div className='answer' key={index} id={index}>
                                 <h1>{answer}</h1>
                             </div>
-    );
+        );
+
+        setAnswerElement(answer);
+
+    },[]);
 
     function selectAnswer(event) {
 
@@ -36,7 +43,7 @@ export default function QuizCard(props) {
                 <h1>{props.id+1}. {props.question}</h1>
             </div>
             <div className="quizCard-answer-container" onClick={selectAnswer}> 
-                {AnswerElement}
+                {answerElement}
             </div>
         </div>
 

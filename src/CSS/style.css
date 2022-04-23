@@ -28,6 +28,7 @@ main{
     width: 80%;
     margin: 2rem auto;
     background-color: #ffffffde;
+    border-radius: 3.75vw;
 }
 
 .correct{

@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 
 .quiz-containter > *{
     font-size: 1vw;
@@ -41,8 +43,27 @@
 
 .result-container{
     display: flex;
+    font-size: 2vw;
     padding: 3.5vw;
     color: #506f08;
     border-top: solid #000000de;
-    border-bottom: solid #000000de;;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5vw;
+    color: #000000de;
+}
+
+.review, .exit{
+    padding: 0.875vw;
+    border-radius: 1.75vw;
+}
+
+.review:hover, .exit:hover{
+    background-color: #fc7d6c;
+    color: #ffffffde;
 }

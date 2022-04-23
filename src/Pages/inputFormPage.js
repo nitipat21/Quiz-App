@@ -53,6 +53,7 @@ export default function InputFormPage() {
                         
                        if (data.response_code === 0) {
                             localStorage.setItem("quiz",JSON.stringify(data.results));
+                            localStorage.setItem("submit",false);
                             navigate('/quizPage');
 
                        } else {
